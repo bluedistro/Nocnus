@@ -24,11 +24,6 @@ class Nocnus:
         This function is generic and deals with all cases of information storage in the database.
         It is meant to stores registration information of venueOwners, Enquirers as well as venue
         addition by venueOwners and booking requests by enquirers to their respective collection.
-        collection_name:
-         * venueOwner => For venue owners info storage
-         * enquirer => For enquirers info storage
-         * venues => For venue information added by venue owners storage
-         * bookingRequests => For booking requests made by enquirers
         documents: Expected registration information for both collections
         """
         self.__collection = self.__database[collection_name]
@@ -49,11 +44,6 @@ class Nocnus:
     ):
         """
             This function generically fetches info from any collection name specified
-            collection_names:
-                *venueOwner
-                *enquirer
-                *venues
-                *bookingRequests
             allResults:
                 *False => returns the first document of the collection
                 *True => returns all the docs in the collection
