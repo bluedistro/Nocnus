@@ -19,7 +19,7 @@ class Nocnus:
     def list_dbs(self):
         return self.__client.list_database_names()
 
-    def register(self, collection_name: str, documents: dict, multi: bool = False):
+    def insert(self, collection_name: str, documents: dict, multi: bool = False):
         """
         This function is generic and deals with all cases of information storage in the database.
         It is meant to stores registration information of venueOwners, Enquirers as well as venue
@@ -100,7 +100,7 @@ class Nocnus:
             delete_track = self.__collection.delete_many(query_data)
             return delete_track.deleted_count
 
-    def update_info(
+    def update(
         self, collection_name: str, query: dict, updated_data: dict, multi: bool = False
     ):
         self.__collection = self.__database[collection_name]

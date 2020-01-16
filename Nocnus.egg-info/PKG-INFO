@@ -1,0 +1,19 @@
+Metadata-Version: 1.2
+Name: Nocnus
+Version: 0.0.1
+Summary: Nocnus is a Python wrapper for quickly implementing CRUD MongoDB operations.
+Home-page: https://github.com/bluedistro/Nocnus
+Author: Kingsley Biney
+Author-email: bineykingsley36@gmail.com
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Intended Audience :: Developers
+Requires-Python: >=3.5
