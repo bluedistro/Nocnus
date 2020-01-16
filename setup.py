@@ -9,7 +9,7 @@ setuptools.setup(
     name="Nocnus",
     license="MIT",
     description="Nocnus is a Python wrapper for quickly implementing CRUD MongoDB operations.",
-    version="v0.0.1",
+    version="v0.0.2",
     long_description=README,
     url="https://github.com/bluedistro/Nocnus",
     packages=setuptools.find_packages(),
