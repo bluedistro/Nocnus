@@ -6,25 +6,17 @@ import sys
 def error_print(*args, **kwargs):
     print(*args, file=sys.stderr, **kwargs)
 
-
-# _DBNAME = "buqdb"
-_CONNECTIONHOST = "mongodb://localhost:27017/"
-
-
 class Nocnus:
-    def __init__(self, _DBNAME):
-        self.__client = MongoClient(_CONNECTIONHOST)
-        self.__database = self.__client[_DBNAME]
+    def __init__(self, db=None, connection_host="mongodb://localhost:27017/"):
+        self.__client = MongoClient(connection_host)
+        self.__database = self.__client[db]
 
     def list_dbs(self):
         return self.__client.list_database_names()
 
     def insert(self, collection_name: str, documents: dict, multi: bool = False):
         """
-        This function is generic and deals with all cases of information storage in the database.
-        It is meant to stores registration information of venueOwners, Enquirers as well as venue
-        addition by venueOwners and booking requests by enquirers to their respective collection.
-        documents: Expected registration information for both collections
+        This method is used to insert documents into a particular collection in the database
         """
         self.__collection = self.__database[collection_name]
         if not multi:
