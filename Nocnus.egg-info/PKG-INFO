@@ -1,6 +1,6 @@
 Metadata-Version: 1.2
 Name: Nocnus
-Version: 0.0.4
+Version: 0.0.5
 Summary: Nocnus is a basic Pymongo wrapper for quickly implementing CRUD MongoDB operations.
 Home-page: https://github.com/bluedistro/Nocnus
 Author: Kingsley Biney

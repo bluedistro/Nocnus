@@ -6,12 +6,7 @@ do not want any any of those in implementing basic CRUD MongoDB operations
 thus the name. (No Ocnus => Nocnus)
 '''
 
-from .Nocnus import (
-    list_dbs,
-    insert,
-    fetch,
-    sort,
-    delete,
-    update,
-    drop_collection
-)
+from nocnus.core import Nocnus
+
+__all__ = ['Nocnus']
+__version__ = '0.0.5'
