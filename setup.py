@@ -1,7 +1,7 @@
 import setuptools
 
-with open('README.md') as f:
-    README = f.read()
+with open('LONG_DESCRIPTION.txt') as f:
+    LONG_DESCRIPTION = f.read()
 
 setuptools.setup(
     author="Kingsley Biney",
@@ -9,8 +9,9 @@ setuptools.setup(
     name="Nocnus",
     license="MIT",
     description="Nocnus is a basic Pymongo wrapper for quickly implementing CRUD MongoDB operations.",
-    version="v0.0.3",
-    long_description=README,
+    version="v0.0.4",
+    py_modules=['nocnus'],
+    long_description=LONG_DESCRIPTION,
     url="https://github.com/bluedistro/Nocnus",
     packages=setuptools.find_packages(),
     python_requires=">=3.5",

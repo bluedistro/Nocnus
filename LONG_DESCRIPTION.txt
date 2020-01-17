@@ -1,0 +1,8 @@
+Nocnus is a simple Python library built on top of Pymongo to ensemble the basic MongoDB CRUD operations into one class in order to simplify its usage and save some development time.
+
+Why the name Nocnus?
+Ocnus is the name of the greek god of delays and frustrations and we
+do not want any any of those in implementing basic CRUD MongoDB operations
+thus the name. (No Ocnus => Nocnus)
+
+Kindly check out the complete documentation at: https://github.com/bluedistro/Nocnus
