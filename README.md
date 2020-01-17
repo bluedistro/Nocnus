@@ -78,6 +78,46 @@ Nocnus requires Pymongo to run (Of course!)
 ```sh
 $ pip3 install Pymongo
 ```
+
+### Usage Examples
+```sh
+from nocnus import Nocnus
+# create a database named "sela"
+db = Nocnus(db='sela')
+# a dictionary containing information to save in the database collection "books"
+single_book = {
+    "name": "Mongo Mastery",
+    "author": "Mike Ekim"
+}
+
+multi_book = [
+    {
+        "name": "Testing Python",
+        "author": "Steven Time"
+    },
+    {
+        "name": "Posting Python",
+        "author": "Paul Timothy"
+    }
+]
+
+# insert the single document single_book into collection books
+doc_id = db.insert(collection_name='books', documents=single_book)
+# insert multiple documents into collection books
+doc_ids = db.insert(collection_name="books", documents=multi_book, multi=True)
+# update the name field of the document with author name Steven Time to Testing Python 2nd Edition
+query = {"author": "Steven Time"}
+updated_data={"name": "Testing Python 2nd Edition"}
+db.update(collection_name="books", query=query, updated_data=updated_data)
+# print the ids of the inserted documents
+print(doc_id, doc_ids)
+# delete a document with author Paul Timothy from the collection
+db.delete(collection_name="books", query_data={"author": "Paul Timothy"})
+# print all documents in the collection books
+print(db.fetch(collection_name="books", allResults=True))
+db.drop_collection(collection_name="books")
+```
+
 ### Development
 
 All contributions are welcome.

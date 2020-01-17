@@ -14,7 +14,7 @@ setuptools.setup(
     url="https://github.com/bluedistro/Nocnus",
     packages=setuptools.find_packages(),
     python_requires=">=3.5",
-    install_requires=['pymongo'],
+    install_requires=['pymongo', 'logging'],
     classifiers=[
                 # Trove classifiers
         # (https://pypi.python.org/pypi?%3Aaction=list_classifiers)
