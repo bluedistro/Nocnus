@@ -100,8 +100,6 @@ multi_book = [
         "author": "Paul Timothy"
     }
 ]
-
-# insert the single document single_book into collection books
 doc_id = db.insert(collection_name='books', documents=single_book)
 # insert multiple documents into collection books
 doc_ids = db.insert(collection_name="books", documents=multi_book, multi=True)
@@ -111,10 +109,13 @@ updated_data={"name": "Testing Python 2nd Edition"}
 db.update(collection_name="books", query=query, updated_data=updated_data)
 # print the ids of the inserted documents
 print(doc_id, doc_ids)
-# delete a document with author Paul Timothy from the collection
+# search for documents with publish_year greater than 2011
+print(db.fetch(collection_name="books", query={"publish_year":{"$gt": 2011}}))
+# # delete a document with author Paul Timothy from the collection
 db.delete(collection_name="books", query_data={"author": "Paul Timothy"})
-# print all documents in the collection books
+# # print all documents in the collection books
 print(db.fetch(collection_name="books", allResults=True))
+# drop the collection
 db.drop_collection(collection_name="books")
 ```
 

@@ -9,4 +9,4 @@ thus the name. (No Ocnus => Nocnus)
 from nocnus.core import Nocnus
 
 __all__ = ['Nocnus']
-__version__ = '0.0.5'
+__version__ = '0.0.7'

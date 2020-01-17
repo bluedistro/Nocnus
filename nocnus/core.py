@@ -63,12 +63,12 @@ class Nocnus:
             if query or specific_field is not None:
                 if query is not None:
                     query_results = [q_search for q_search in self.__collection.find(query)]
-                    kwarg_return["query_results":query_results]
+                    kwarg_return.update({"query_results":query_results})
                 if specific_field is not None:
                     specific_field_results = [
                         sf_search for sf_search in self.__collection.find(specific_field)
                     ]
-                    kwarg_return["specific_field_results":specific_field_results]
+                    kwarg_return.update({"specific_field_results":specific_field_results})
                 return kwarg_return
             else:
                 if not allResults:
